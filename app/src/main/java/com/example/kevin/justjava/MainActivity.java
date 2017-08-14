@@ -15,12 +15,15 @@ import android.view.View;
 import android.widget.TextView;
 import java.text.NumberFormat;
 
+import static com.example.kevin.justjava.R.string.price;
+
 /**
  * This app displays an order form to order coffee.
  */
 public class MainActivity extends AppCompatActivity {
 
     int quantity = 0;
+    double price = 3.75;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        String finalMessage = "The price of the coffee is $" + (quantity * 3.75);
+        String finalMessage = "The price of the coffee is $" + (quantity * price);
         displayMessage(finalMessage);
     }
 
